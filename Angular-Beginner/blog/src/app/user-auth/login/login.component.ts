@@ -2,9 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-login',
- // standalone: true,
- // imports: [],
- // Commenting above lines beacause it was giving me error. 
+  standalone: true,
+  imports: [], 
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
