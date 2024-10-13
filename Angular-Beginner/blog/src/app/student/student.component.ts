@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   imports: [],
   template: `
     <p class="custom">
-      Created Student Component!!!
+      Created Student (inline-template & inline-style) Component!!!
     </p>
   `,
   styles: `

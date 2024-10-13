@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   imports: [],
   template: `
     <p class="custom">
-      Created Employee component!!!
+      Created Employee (inline-template) component!!!
     </p>
   `,
   styleUrl: './employee.component.css'
