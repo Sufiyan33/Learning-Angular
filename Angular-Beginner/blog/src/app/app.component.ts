@@ -4,11 +4,12 @@ import { UserListComponent } from "./user-list/user-list.component";
 import { MyCompComponent } from "./my-comp/my-comp.component";
 import { EmployeeComponent } from './employee/employee.component';
 import { StudentComponent } from "./student/student.component";
+import { UserAuthModule } from './user-auth/user-auth.module';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, UserListComponent, MyCompComponent, EmployeeComponent, StudentComponent],
+  imports: [RouterOutlet, UserListComponent, MyCompComponent, EmployeeComponent, StudentComponent, UserAuthModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
