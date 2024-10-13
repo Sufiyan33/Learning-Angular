@@ -20,4 +20,16 @@ export class AppComponent {
   getValue(){
     return "What about you"
   }
+
+  /*
+  Since I'm writting function inside a class, hence don't need to add function keyword.
+  */
+  getName(Intro:string,name:string){
+    alert("My Name is ")
+    alert("Sufiyan Ahmad")
+  }
+  //OR you can also pass any, if you don't want to declare data types.
+  getNameWithAny(name:any){
+    alert("Any example!!!")
+  }
 }
