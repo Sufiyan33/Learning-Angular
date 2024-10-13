@@ -32,4 +32,8 @@ export class AppComponent {
   getNameWithAny(name:any){
     alert("Any example!!!")
   }
+
+  getData(value:string){
+    console.warn("testing events!!!")
+  }
 }

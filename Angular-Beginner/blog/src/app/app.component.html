@@ -22,4 +22,15 @@
 <app-login></app-login>
 <!-- Let's make a button & call using function-->
  <button (click)="getName('Intro','name')">click me</button><br/><br/>
- <button (click)="getNameWithAny('name')">press me</button>
+ <button (click)="getNameWithAny('name')">press me</button><br/><br/>
+
+ <!-- Creating some events -->
+  <button (click)="getData('sufiyan')">call function</button><br/><br/>
+  <input type="text" #box (keyup)="getData('box.value')" placeholder="event keyup"><br/><br/>
+  <input type="text" #box1 (keydown)="getData('box1.value')" placeholder="event keyDwon"><br/><br/>
+  <input type="text" #box2 (keypress)="getData('box2.value')" placeholder="event keypress"><br/><br/>
+  <input type="text" #box3 (blur)="getData('box3.value')" placeholder="event blur"><br/><br/>
+  <input type="text" #box4 (input)="getData('box4.value')" placeholder="event input"><br/><br/>
+
+  <h3 (mouseover)="getData('mouse over')">Sufiyan take mouseover</h3>
+  <h3 ((mouseleave))="getData('mouse leave')">Sufiyan mouse leave</h3>
