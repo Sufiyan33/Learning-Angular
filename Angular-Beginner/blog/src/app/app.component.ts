@@ -43,4 +43,10 @@ export class AppComponent {
     console.warn(data);
     this.displayVal=data;
   }
+
+  // Writting function to increase/decrease counter
+  count=0;
+  counter(type:string){
+    type==='add' ? this.count++ : this.count--;
+  }
 }
