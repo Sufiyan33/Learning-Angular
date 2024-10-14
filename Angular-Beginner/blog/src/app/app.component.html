@@ -34,3 +34,12 @@
 
   <h3 (mouseover)="getData('mouse over')">Sufiyan take mouseover</h3>
   <h3 ((mouseleave))="getData('mouse leave')">Sufiyan mouse leave</h3>
+
+<!-- Getting text box value and printing it. -->
+ <!--<input type="text" #key (keyup)="getBoxValue(key.value)" placeholder="Enter name" name="name"> -->
+ <!-- We can also get this by using button click, use same code like above and change little bit-->
+ <input type="text" #key placeholder="Enter name" name="name"><br/><br/>
+ <button (click)="getBoxValue(key.value)">click</button>
+ <p>
+  <b>Value entered are:</b> {{displayVal}}
+ </p>

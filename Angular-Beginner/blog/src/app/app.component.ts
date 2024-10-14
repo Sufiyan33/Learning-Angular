@@ -36,4 +36,11 @@ export class AppComponent {
   getData(value:string){
     console.warn("testing events!!!")
   }
+
+  // Getting text box value and printing it.
+  displayVal='';
+  getBoxValue(data:string){
+    console.warn(data);
+    this.displayVal=data;
+  }
 }
