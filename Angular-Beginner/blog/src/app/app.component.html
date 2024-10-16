@@ -91,3 +91,12 @@
     <h3 style="color: brown;">Default brown color</h3>
   }
  }
+
+<!-- For loop using to iterate array -->
+ @for (item of users; track $index) {
+  <h3>Name is: {{item}} and index is: {{$index}}</h3>
+ }
+
+ @for (item of users; track item) {
+  <h4>Name is: {{item}} </h4>
+ }

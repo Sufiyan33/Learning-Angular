@@ -59,4 +59,7 @@ export class AppComponent {
   // Now defining if-else conditions.
   show = false;
   color = "green"
+
+  // For Loop.
+  users =['Anil', 'Ajay', 'Sabir', 'Sufiyan'];
 }
