@@ -55,4 +55,7 @@ export class AppComponent {
   //disable = true;
   //Now let's make this disable property false and analyze
   disable = false;
+
+  // Now defining if-else conditions.
+  show = false;
 }

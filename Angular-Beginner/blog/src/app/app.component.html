@@ -56,4 +56,12 @@
 
   <!-- Binding property -->
    <input type="text" name="user-name" value={{name}} disabled={{disable}}><br/><br/>
-   <input type="text" name="user-name" [value]=name [disabled]=disable>
+   <input type="text" name="user-name" [value]=name [disabled]=disable><br/><br/>
+
+   <!-- If show is true then executre if otherwise else block -->
+    @if (show) {
+      Now displaying the flag value: <b>{{show}}</b>
+    }
+    @else {
+      <p>Else value of flag is: <b>{{show}}</b></p>
+    }
