@@ -62,4 +62,12 @@ export class AppComponent {
 
   // For Loop.
   users =['Anil', 'Ajay', 'Sabir', 'Sufiyan'];
+
+  // Creating object array and exe over loop
+  userDetails=[{
+    name: 'Anil', email: 'abc@gmail.com', phoneNo:1234},
+    {name: 'Ajay', email: 'abcd@gmail.com', phoneNo:12345},
+    {name: 'Sabir', email: 'abcde@gmail.com', phoneNo:123456},
+    {name: 'Sufiyan', email: 'abcdef@gmail.com', phoneNo:1234567},
+  ];
 }
