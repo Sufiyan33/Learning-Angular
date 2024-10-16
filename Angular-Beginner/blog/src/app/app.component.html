@@ -41,15 +41,15 @@
   <h3 ((mouseleave))="getData('mouse leave')">Sufiyan mouse leave</h3>
 
 <!-- Getting text box value and printing it. -->
- <!--<input type="text" #key (keyup)="getBoxValue(key.value)" placeholder="Enter name" name="name"> -->
- <!-- We can also get this by using button click, use same code like above and change little bit-->
+<!--<input type="text" #key (keyup)="getBoxValue(key.value)" placeholder="Enter name" name="name"> -->
+<!-- We can also get this by using button click, use same code like above and change little bit-->
  <input type="text" #key placeholder="Enter name" name="name"><br/><br/>
  <button (click)="getBoxValue(key.value)">click</button>
  <p>
   <b>Value entered are:</b> {{displayVal}}
  </p>
 
- <!-- Making a counter button & increasing & decreasing value -->
+<!-- Making a counter button & increasing & decreasing value -->
   <button (click)="counter('add')">++</button>
   <p>count: {{count}}</p>
   <button (click)="counter('minus')">--</button><br/> <br />
@@ -58,7 +58,7 @@
    <input type="text" name="user-name" value={{name}} disabled={{disable}}><br/><br/>
    <input type="text" name="user-name" [value]=name [disabled]=disable><br/><br/>
 
-   <!-- If show is true then executre if otherwise else block -->
+<!-- If show is true then executre if otherwise else block -->
     @if (show) {
       Now displaying the flag value: <b>{{show}}</b>
     }
@@ -75,3 +75,19 @@
     } @else {
       <h3 style="color: navy;">Default(Black) color</h3>
     }
+
+<!-- Switch case with latest version -->
+ @switch (color) {
+  @case ('red') {
+    <h3 style="color: red;">Red color</h3>
+  } @case ('green') {
+    <h3 style="color: green;">Green color</h3>
+  } @case ('blue') {
+    <h3 style="color: blue;">Blue color</h3>
+  } @case ('yellow') {
+    <h3 style="color: yellow;">Yellow color</h3>
+  }
+  @default {
+    <h3 style="color: brown;">Default brown color</h3>
+  }
+ }
