@@ -49,4 +49,10 @@ export class AppComponent {
   counter(type:string){
     type==='add' ? this.count++ : this.count--;
   }
+
+  // Binding property
+  name="peter";
+  //disable = true;
+  //Now let's make this disable property false and analyze
+  disable = false;
 }

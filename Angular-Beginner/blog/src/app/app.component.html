@@ -52,4 +52,8 @@
  <!-- Making a counter button & increasing & decreasing value -->
   <button (click)="counter('add')">++</button>
   <p>count: {{count}}</p>
-  <button (click)="counter('minus')">--</button>
+  <button (click)="counter('minus')">--</button><br/> <br />
+
+  <!-- Binding property -->
+   <input type="text" name="user-name" value={{name}} disabled={{disable}}><br/><br/>
+   <input type="text" name="user-name" [value]=name [disabled]=disable>
