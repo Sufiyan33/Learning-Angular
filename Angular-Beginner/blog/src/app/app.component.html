@@ -108,3 +108,6 @@
  @for (item of userDetails; track item; let index = $index) {
   <h3 style="color: blue">{{index}}: {{item.name}} {{item.email}} {{item.phoneNo}}</h3>
  }
+ @for (item of userDetails; track item; let first = $first, last = $last) {
+  <h3 style="color: lightseagreen">{{first}}: {{item.name}} {{item.email}} {{last}}</h3>
+ }
