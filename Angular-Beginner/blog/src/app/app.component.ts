@@ -58,4 +58,5 @@ export class AppComponent {
 
   // Now defining if-else conditions.
   show = false;
+  color = "blue"
 }

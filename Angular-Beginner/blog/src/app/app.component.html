@@ -65,3 +65,13 @@
     @else {
       <p>Else value of flag is: <b>{{show}}</b></p>
     }
+
+    @if (color === 'red') {
+      <h3 style="color: red;">Red color</h3>
+    } @else if (color ==='green') {
+      <h3 style="color: green;">Green color</h3>
+    } @else if (color === 'blue') {
+      <h3 style="color: blue;">Blue color</h3>
+    } @else {
+      <h3 style="color: navy;">Default(Black) color</h3>
+    }
