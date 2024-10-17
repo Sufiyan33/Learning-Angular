@@ -111,3 +111,11 @@
  @for (item of userDetails; track item; let first = $first, last = $last) {
   <h3 style="color: lightseagreen">{{first}}: {{item.name}} {{item.email}} {{last}}</h3>
  }
+
+<!-- Nested for loop -->
+ @for (user of userDetails; track user; let i= $index) {
+  <p style="color: green;"><b>Nested for Loop</b></p>
+  @for (users of userDetails; track users; let j= $index) {
+    <p>{{i+j}} -- {{user.name}} {{users.name}}</p>
+  }
+ }
