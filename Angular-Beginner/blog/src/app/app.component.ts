@@ -70,4 +70,12 @@ export class AppComponent {
     {name: 'Sabir', email: 'abcde@gmail.com', phoneNo:123456},
     {name: 'Sufiyan', email: 'abcdef@gmail.com', phoneNo:1234567},
   ];
+
+  // Style Binding example
+  colorFlag = "red";
+  bgColorFlag = "black";
+  updateColor(){
+    this.colorFlag = "Blue";
+    this.bgColorFlag = "gray";
+  }
 }

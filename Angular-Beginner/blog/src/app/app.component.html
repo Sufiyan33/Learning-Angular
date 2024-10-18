@@ -119,3 +119,7 @@
     <p>{{i+j}} -- {{user.name}} {{users.name}}</p>
   }
  }
+
+<!-- Style Binding example -->
+ <h2 [style.color]="colorFlag" [style.backgroundColor]="bgColorFlag"><b>Style Binding example</b></h2>
+ <button (click)="updateColor()">update color</button>
