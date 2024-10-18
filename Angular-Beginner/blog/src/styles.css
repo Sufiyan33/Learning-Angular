@@ -2,3 +2,8 @@
 .heading{
     color: green;
 }
+
+/* TO remove globally marging */
+body{
+    margin: 0;
+}

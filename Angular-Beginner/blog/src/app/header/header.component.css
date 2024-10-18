@@ -1,0 +1,29 @@
+nav img{
+    width: 70px;
+    height: 70px;
+}
+nav{
+    background-color: skyblue;
+    /* to remove global marging use styles.css file */
+    padding: 5px;
+}
+
+ul{
+    float: right;
+    list-style-type: none;
+}
+ul li{
+    display: inline-block;
+    padding: 10px;
+}
+
+li a{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+li a:hover{
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
