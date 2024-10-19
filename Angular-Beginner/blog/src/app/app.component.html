@@ -130,3 +130,29 @@
 <!-- Style Binding example -->
  <h2 [style.color]="colorFlag" [style.backgroundColor]="bgColorFlag"><b>Style Binding example</b></h2>
  <button (click)="updateColor()">update color</button>
+
+<!-- Sharing data between child and parent components -->
+  <h1>Sharing data between child and parent components</h1>
+  <div class="it">
+    <h2>Input</h2>
+    <app-item-details [item]="currentItem"></app-item-details>
+  </div>
+  <div class="it">
+    <h2>Output</h2>
+    <app-item-output (newItemEvent)="addItem($event)"></app-item-output>
+    <h3>Parent component receiving value via Output()</h3>
+    <ul>
+      
+        @for (item of items; track $index) {
+          <li>{{item}}</li> 
+        }
+      
+    </ul>
+  </div>
+
+  <div class="it">
+    <h2>Input and Output together</h2>
+    <p>Open the console to see the EventEmitter at work when you click Delete.</p>
+    <app-item-input-output [item]="currentItem" (deleteRequest)="corssOffItem($event)">
+    </app-item-input-output>
+  </div>

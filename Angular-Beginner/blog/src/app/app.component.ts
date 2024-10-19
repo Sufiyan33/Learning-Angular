@@ -84,4 +84,16 @@ export class AppComponent {
     this.colorFlag = "Blue";
     this.bgColorFlag = "gray";
   }
+
+  // Sharing data between child and parent components
+  currentItem = 'Television';
+  items = ['item1','item2','item3','item4'];
+
+  addItem(newItem: String){
+    this.items.push(newItem.charAt(2));
+  }
+
+  corssOffItem(item: String){
+    console.warn('Parent says: crossing off ${item}.')
+  }
 }
