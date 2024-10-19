@@ -21,7 +21,12 @@
 <h1 class="{{title}}">Hello Angular {{title}}</h1>
 <h2 class={{title}}>Hello Angular {{title}}</h2>
 
-<app-user-list></app-user-list>
+<!-- Re-using list component -->
+ <h1 id="event-binding">Event Binding</h1>
+ <div class="group">
+  <app-user-list></app-user-list>
+ </div>
+
 <app-my-comp></app-my-comp>
 <app-employee></app-employee>
 <app-student></app-student>
