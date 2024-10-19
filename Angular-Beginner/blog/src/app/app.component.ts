@@ -9,13 +9,14 @@ import { LoginComponent } from "./user-auth/login/login.component";
 import { HeaderComponent } from './header/header.component';
 import { ItemDetailsComponent } from './item-details/item-details.component';
 import { ItemInputOutputComponent } from './item-input-output/item-input-output.component';
+import { ItemOutputComponent } from './item-output/item-output.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, UserListComponent, MyCompComponent, EmployeeComponent, 
     StudentComponent, UserAuthModule, LoginComponent, HeaderComponent, ItemDetailsComponent, 
-    ItemInputOutputComponent],
+    ItemInputOutputComponent, ItemOutputComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
