@@ -7,7 +7,7 @@
 </p>
 <div>
     @for (item of items; track $index) {
-        <button type="button" (click)="selectItem(item)">
+        <button class="button" type="button" (click)="selectItem(item)">
             {{item.name}}
         </button>
     }
