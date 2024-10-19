@@ -7,11 +7,13 @@ import { StudentComponent } from "./student/student.component";
 import { UserAuthModule } from './user-auth/user-auth.module';
 import { LoginComponent } from "./user-auth/login/login.component";
 import { HeaderComponent } from './header/header.component';
+import { ItemDetailsComponent } from './item-details/item-details.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, UserListComponent, MyCompComponent, EmployeeComponent, StudentComponent, UserAuthModule, LoginComponent, HeaderComponent],
+  imports: [RouterOutlet, UserListComponent, MyCompComponent, EmployeeComponent, 
+    StudentComponent, UserAuthModule, LoginComponent, HeaderComponent, ItemDetailsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
