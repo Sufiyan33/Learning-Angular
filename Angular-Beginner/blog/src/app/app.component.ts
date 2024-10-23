@@ -11,13 +11,14 @@ import { ItemDetailsComponent } from './item-details/item-details.component';
 import { ItemInputOutputComponent } from './item-input-output/item-input-output.component';
 import { ItemOutputComponent } from './item-output/item-output.component';
 import { EventBindingDetailsComponent } from "./event-binding-details/event-binding-details.component";
+import { TwobindingSizerComponent } from "./twobinding-sizer/twobinding-sizer.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, UserListComponent, MyCompComponent, EmployeeComponent,
     StudentComponent, UserAuthModule, LoginComponent, HeaderComponent, ItemDetailsComponent,
-    ItemInputOutputComponent, ItemOutputComponent, EventBindingDetailsComponent],
+    ItemInputOutputComponent, ItemOutputComponent, EventBindingDetailsComponent, TwobindingSizerComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -103,4 +104,7 @@ export class AppComponent {
   deleteItem(itemEvent: Item){
     alert('Delete the ${item.name}.')
   }
+
+  // Two way binding example.
+  fontSizePx= 16;
 }

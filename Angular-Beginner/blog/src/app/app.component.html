@@ -163,3 +163,20 @@
   <h4>Custom events with EventEmitter</h4>
  <app-event-binding-details (deleteRequest)="deleteItem($event)" ></app-event-binding-details>
 </div>
+
+<!-- Two binding example -->
+ <h1 id="two-way">Two-way Binding</h1>
+ <div class="twb">
+  <div id="twb1">
+    <app-twobinding-sizer [(size)]="fontSizePx"></app-twobinding-sizer>
+    <div [style.font-size.px]="fontSizePx">Resizable text</div>
+    <label>FontSize(px): <input [(ngModle)="fontSizePx"]></label>
+  </div><br/>
+
+  <div id="twb2">
+    <h2>De-sugared two-way binding</h2>
+    <app-twobinding-sizer [size]="fontSizePx" (sizeChange)="fontSizePx = $event"></app-twobinding-sizer>
+  </div>
+ </div>
+ <!-- to see box or output on ui then you need to divide outer div tag-->
+ 

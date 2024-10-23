@@ -19,3 +19,16 @@
     box-shadow: 0px 1px 2px #dddde3,
         0px 2px 4px #dddde3
 }
+.twb {
+    background-color: #fff;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    border: 1px solid #d8d8d8;
+    box-shadow: 0px 1px 2px #dddde3, 0px 2px 4px #dddde3;
+    width: 30%;
+  }
+  
+  input {
+    margin-top: 8px;
+  }
