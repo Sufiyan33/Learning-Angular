@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { UserListComponent } from "./user-list/user-list.component";
+import { Item, UserListComponent } from "./user-list/user-list.component";
 import { MyCompComponent } from "./my-comp/my-comp.component";
 import { EmployeeComponent } from './employee/employee.component';
 import { StudentComponent } from "./student/student.component";
@@ -10,13 +10,14 @@ import { HeaderComponent } from './header/header.component';
 import { ItemDetailsComponent } from './item-details/item-details.component';
 import { ItemInputOutputComponent } from './item-input-output/item-input-output.component';
 import { ItemOutputComponent } from './item-output/item-output.component';
+import { EventBindingDetailsComponent } from "./event-binding-details/event-binding-details.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, UserListComponent, MyCompComponent, EmployeeComponent, 
-    StudentComponent, UserAuthModule, LoginComponent, HeaderComponent, ItemDetailsComponent, 
-    ItemInputOutputComponent, ItemOutputComponent],
+  imports: [RouterOutlet, UserListComponent, MyCompComponent, EmployeeComponent,
+    StudentComponent, UserAuthModule, LoginComponent, HeaderComponent, ItemDetailsComponent,
+    ItemInputOutputComponent, ItemOutputComponent, EventBindingDetailsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -95,5 +96,11 @@ export class AppComponent {
 
   corssOffItem(item: String){
     console.warn('Parent says: crossing off ${item}.')
+  }
+
+  // Event binding details.
+  currentItemforTeapot = { name: 'teapot'} ;
+  deleteItem(itemEvent: Item){
+    alert('Delete the ${item.name}.')
   }
 }

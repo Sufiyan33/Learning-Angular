@@ -1,1 +1,10 @@
-<p>event-binding-details works!</p>
+<div class="detail">
+    <p>This is the event-binding-details component</p>
+    <img 
+        src="{{itemImageUrl}}"
+        alt="{{item.name}}"
+        [style.display]="displayNone"
+    />
+    <div [style.text-decoration]="lineThrough">{{item.name}}</div>
+    <button type="button" (click)="delete()">Delete</button>
+</div>

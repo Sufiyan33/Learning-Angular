@@ -156,3 +156,10 @@
     <app-item-input-output [item]="currentItem" (deleteRequest)="corssOffItem($event)">
     </app-item-input-output>
   </div>
+
+<!-- Event Binding details -->
+<div class="group">
+  <h2>Binding to a nested component</h2>
+  <h4>Custom events with EventEmitter</h4>
+ <app-event-binding-details (deleteRequest)="deleteItem($event)" ></app-event-binding-details>
+</div>
