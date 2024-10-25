@@ -13,4 +13,8 @@ import { FormsModule } from '@angular/forms';
 export class AppComponent {
   title = 'Angular Advance Topics';
   directiveTitle = 'Hello!!! Welcome to directive.';
+
+  userLogin(item:any){
+    console.warn(item)
+  }
 }

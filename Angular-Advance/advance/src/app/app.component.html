@@ -1,3 +1,14 @@
 <h1 style="color: brown;">Angular Advance Topics</h1>
 
 <h2 appRedElement >{{directiveTitle}}</h2>
+
+<div id="d1">
+    <h2>Please Login to proceed</h2>
+    <div id="d2">
+        <form #loginForm="ngForm" (ngSubmit)=userLogin(loginForm.value)>
+            <input type="text" placeholder="Enter your userName" name="name" ngModel><br/><br/>
+            <input type="password" placeholder="Enter your password" name="password" ngModel> <br/><br/>
+            <button class="btn">Login</button>
+        </form>
+    </div>
+</div>
