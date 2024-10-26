@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { RedElementDirective } from './red-element.directive'; 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validator } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -29,13 +29,27 @@ export class AppComponent {
   }
 
   // Adding Group form Control 
+  // Now lets apply validations
   profileForm = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
-    password: new FormControl('')
+    firstName: new FormControl('', [Validators.required, Validators.minLength(5)]),
+    lastName: new FormControl('', [Validators.required, Validators.minLength(5)]),
+    password: new FormControl('', [Validators.required, Validators.min(2)])
   })
 
   profileLoginFrom(){
     console.warn(this.profileForm.value);
+  }
+
+  // create getter to get value in html file.
+  get firstNameValidator(){
+    return this.profileForm.get('firstName')
+  }
+
+  get lastNameValidator(){
+    return this.profileForm.get('lastName')
+  }
+
+  get passwordValidator(){
+    return this.profileForm.get('password')
   }
 }

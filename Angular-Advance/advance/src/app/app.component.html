@@ -38,12 +38,27 @@
  <form [formGroup]="profileForm" (ngSubmit)="profileLoginFrom()">
     <h4 style="color: red;">Reactive Grouping form control</h4>
     <label for="first-name">First Name: </label>
-    <input type="text" placeholder="Enter first name" name="firstName" formControlName="firstName"><br/><br/>
+    <input type="text" placeholder="Enter first name" name="firstName" formControlName="firstName">
+    <br/>
+        <span style="color: red;" *ngIf="firstNameValidator?.invalid && firstNameValidator?.touched">
+            Enter valid first name!
+        </span>
+    <br/>
 
     <label for="last-name">Last Name: </label>
-    <input type="text" placeholder="Enter last name" name="lastName" formControlName="lastName"><br/><br/>
+    <input type="text" placeholder="Enter last name" name="lastName" formControlName="lastName">
+    <br/>
+        <span style="color: red;" *ngIf="lastNameValidator?.invalid && lastNameValidator?.touched">
+            Enter valid last name!
+        </span>
+    <br/>
 
     <label for="password">Password: </label>
-    <input type="password" placeholder="Enter password" name="password" formControlName="password"><br/><br/>
-    <button class="btn">Login</button>
+    <input type="password" placeholder="Enter password" name="password" formControlName="password">
+    <br/>
+        <span style="color: red;" *ngIf="passwordValidator?.invalid && passwordValidator?.touched">
+            Enter valid password!
+        </span>
+    <br/>
+    <button class="btn" [disabled]="profileForm.invalid">Login</button>
  </form>
