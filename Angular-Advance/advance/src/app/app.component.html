@@ -11,4 +11,9 @@
             <br/><span *ngIf="pass.invalid && pass.touched" style="color: red;">Please enter password</span><br/>
         <button class="btn">Login</button>
     </form>
+        <form #loginForm="ngForm" (ngSubmit)=userLogin(loginForm.controls)>
+            <input type="text" placeholder="Enter your userName" name="name" ngModel><br/><br/>
+            <input type="password" placeholder="Enter your password" name="password" ngModel> <br/><br/>
+            <button class="btn">Login</button>
+        </form>
 </div>
