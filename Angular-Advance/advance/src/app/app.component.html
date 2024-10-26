@@ -7,7 +7,10 @@
     <form #loginForm="ngForm" (ngSubmit)= "loginForm.form.valid && userLogin(loginForm.controls)">
         <input type="text" required #name="ngModel" pattern="[a-zA-Z]+$" placeholder="Enter your userName" 
             name="name" [ngClass]="{error : name.errors && name.touched}" ngModel>
-            <br/><span *ngIf="name.invalid && name.touched" style="color: red;">Please enter a valid name</span><br/>
+            <br/><span *ngIf="name.invalid && name.errors && name.touched" style="color: red;">
+                <small class="text-danger" *ngIf="name.errors['required']">Name is required</small>
+                <small class="text-danger" *ngIf="name.errors['pattern']">Please enter valid name</small>
+            </span><br/>
         <input type="password" minlength="2" maxlength="6" required #pass="ngModel" placeholder="Enter your password" 
             name="password" [ngClass]="{error : pass.errors && pass.touched}" ngModel>
             <br/><span *ngIf="pass.invalid && pass.touched" style="color: red;">Please enter password</span><br/>
