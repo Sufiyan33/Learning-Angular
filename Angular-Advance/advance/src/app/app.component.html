@@ -13,7 +13,11 @@
             </span><br/>
         <input type="password" minlength="2" maxlength="6" required #pass="ngModel" placeholder="Enter your password" 
             name="password" [ngClass]="{error : pass.errors && pass.touched}" ngModel>
-            <br/><span *ngIf="pass.invalid && pass.touched" style="color: red;">Please enter password</span><br/>
+            <br/><span *ngIf="pass.invalid && pass.errors && pass.touched" style="color: red;">
+                <small class="text-danger" *ngIf="pass.errors['required']">Please enter password</small>
+                <small class="text-danger" *ngIf="pass.errors['minlength']">Password should be more than 2 digits</small>
+                <small class="text-danger" *ngIf="pass.errors['maxlength']">Password should be max 8 digits</small>
+            </span><br/>
         <button [disabled]="loginForm.form.status === 'INVALID'" class="btn">Login</button>
     </form>
 </div>
