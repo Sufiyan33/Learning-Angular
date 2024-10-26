@@ -4,11 +4,11 @@
 
 <div class="d1">
     <h2>Please Login to proceed</h2>
-    <form #loginForm="ngForm" (ngSubmit)=userLogin(loginForm.controls)>
-        <input type="text" required #name="ngModel" placeholder="Enter your userName" name="name" ngModel>
+    <form #loginForm="ngForm" (ngSubmit)= "loginForm.form.valid && userLogin(loginForm.controls)">
+        <input type="text" required #name="ngModel" pattern="[a-zA-Z]+$" placeholder="Enter your userName" name="name" ngModel>
             <br/><span *ngIf="name.invalid && name.touched" style="color: red;">Please enter a valid name</span><br/>
         <input type="password" minlength="2" maxlength="6" required #pass="ngModel" placeholder="Enter your password" name="password" ngModel>
             <br/><span *ngIf="pass.invalid && pass.touched" style="color: red;">Please enter password</span><br/>
-        <button class="btn">Login</button>
+        <button [disabled]="loginForm.form.status === 'INVALID'" class="btn">Login</button>
     </form>
 </div>
