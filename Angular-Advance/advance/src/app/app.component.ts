@@ -4,7 +4,7 @@ import { RedElementDirective } from './red-element.directive';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -22,8 +22,20 @@ export class AppComponent {
     console.warn(item)
   }
 
-  public nameFiled = new FormControl('');
+  // Adding basic FormControl
+  nameFiled = new FormControl('');
   updateName(){
     this.nameFiled.setValue('Reactive forms');
+  }
+
+  // Adding Group form Control 
+  profileForm = new FormGroup({
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+    password: new FormControl('')
+  })
+
+  profileLoginFrom(){
+    console.warn(this.profileForm.value);
   }
 }

@@ -23,7 +23,7 @@
     </form>
 </div>
 
-<!-- Reactive froms -->
+<!-- Reactive froms basic FormControl-->
  <br/>
  <form>
  <h4 style="color: red;">Reactive forms basic form control</h4>
@@ -31,4 +31,19 @@
     <input type="text" id="name" [formControl]="nameFiled"><br/>
     <p style="color: green;">Value: {{nameFiled.value}}</p>
     <button class="btn" (click)="updateName()">Update name</button>
+ </form>
+
+<!-- Reactive form Group Control-->
+ <br/>
+ <form [formGroup]="profileForm" (ngSubmit)="profileLoginFrom()">
+    <h4 style="color: red;">Reactive Grouping form control</h4>
+    <label for="first-name">First Name: </label>
+    <input type="text" placeholder="Enter first name" name="firstName" formControlName="firstName"><br/><br/>
+
+    <label for="last-name">Last Name: </label>
+    <input type="text" placeholder="Enter last name" name="lastName" formControlName="lastName"><br/><br/>
+
+    <label for="password">Password: </label>
+    <input type="password" placeholder="Enter password" name="password" formControlName="password"><br/><br/>
+    <button class="btn">Login</button>
  </form>
