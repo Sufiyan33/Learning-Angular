@@ -22,3 +22,13 @@
         <button [disabled]="loginForm.form.status === 'INVALID'" class="btn">Login</button>
     </form>
 </div>
+
+<!-- Reactive froms -->
+ <br/>
+ <form>
+ <h4 style="color: red;">Reactive forms basic form control</h4>
+    <label for="name">Name: </label>
+    <input type="text" id="name" [formControl]="nameFiled"><br/>
+    <p style="color: green;">Value: {{nameFiled.value}}</p>
+    <button class="btn" (click)="updateName()">Update name</button>
+ </form>
