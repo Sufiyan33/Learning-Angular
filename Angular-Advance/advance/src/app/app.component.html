@@ -4,7 +4,7 @@
 
 <div class="d1">
     <h2>Please Login to proceed</h2>
-        <form #loginForm="ngForm" (ngSubmit)=userLogin(loginForm.value)>
+        <form #loginForm="ngForm" (ngSubmit)=userLogin(loginForm.controls)>
             <input type="text" placeholder="Enter your userName" name="name" ngModel><br/><br/>
             <input type="password" placeholder="Enter your password" name="password" ngModel> <br/><br/>
             <button class="btn">Login</button>
