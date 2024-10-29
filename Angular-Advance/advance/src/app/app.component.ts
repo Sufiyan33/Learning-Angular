@@ -5,12 +5,13 @@ import { FormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormControl, FormGroup, Validator } from '@angular/forms';
+import { UsdToInrPipe } from './pipes/usd-to-inr.pipe';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, RedElementDirective, FormsModule, CommonModule, 
-    ReactiveFormsModule],
+    ReactiveFormsModule, UsdToInrPipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
