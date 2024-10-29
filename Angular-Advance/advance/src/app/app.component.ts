@@ -1,17 +1,18 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { RedElementDirective } from './red-element.directive'; 
 import { FormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormControl, FormGroup, Validator } from '@angular/forms';
 import { UsdToInrPipe } from './pipes/usd-to-inr.pipe';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, RedElementDirective, FormsModule, CommonModule, 
-    ReactiveFormsModule, UsdToInrPipe],
+    ReactiveFormsModule, UsdToInrPipe, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
