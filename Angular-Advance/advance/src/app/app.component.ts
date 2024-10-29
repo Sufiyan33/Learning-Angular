@@ -16,6 +16,7 @@ import { FormControl, FormGroup, Validator } from '@angular/forms';
 })
 export class AppComponent {
   title = 'Angular Advance Topics';
+  today = Date();
   directiveTitle = 'Hello!!! Welcome to directive.';
 
   userLogin(item:any){
