@@ -5,6 +5,11 @@
 <h1 style="color: brown;">{{today}}</h1>
 <h1 style="color: brown;">{{today | date : 'fullDate'}}</h1>
 
+<h2>{{title | slice :2 : 5 | uppercase}}</h2>
+<h2>{{user | json | uppercase}}</h2>
+<h2>{{0002000.30000 | number :'3.2-3'}}</h2>
+<h2>{{2.30 | number :'3.2-3'}}</h2>
+
 
 <h2 appRedElement >{{directiveTitle}}</h2>
 
