@@ -1,4 +1,30 @@
 <h1 style="color: brown;">{{title}}</h1>
+<!-- Adding Navbar to test Redirecting -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="user" >User <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="user-list" >User_list</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+     <!-- <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>-->
+    </div>
+</nav>
+
 <!-- Example of Pipes -->
 <h1 style="color: brown;">{{title | uppercase}}</h1>
 <h1 style="color: brown;">{{title | lowercase}}</h1>
@@ -36,7 +62,7 @@
                 <small class="text-danger" *ngIf="pass.errors['minlength']">Password should be more than 2 digits</small>
                 <small class="text-danger" *ngIf="pass.errors['maxlength']">Password should be max 8 digits</small>
             </span><br/>
-        <button [disabled]="loginForm.form.status === 'INVALID'" class="btn">Login</button>
+        <button [disabled]="loginForm.form.status === 'INVALID'" class="btns">Login</button>
     </form>
 </div>
 
@@ -47,7 +73,7 @@
     <label for="name">Name: </label>
     <input type="text" id="name" [formControl]="nameFiled"><br/>
     <p style="color: green;">Value: {{nameFiled.value}}</p>
-    <button class="btn" (click)="updateName()">Update name</button>
+    <button class="btns" (click)="updateName()">Update name</button>
  </form>
 
 <!-- Reactive form Group Control-->
@@ -77,7 +103,7 @@
             Enter valid password!
         </span>
     <br/>
-    <button class="btn" [disabled]="profileForm.invalid">Login</button>
+    <button class="btns" [disabled]="profileForm.invalid">Login</button>
  </form>
 
 <!-- Adding router functionality -->
