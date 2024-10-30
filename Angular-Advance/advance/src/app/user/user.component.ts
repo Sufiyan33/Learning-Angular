@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-user',
@@ -9,5 +9,9 @@ import { RouterLink } from '@angular/router';
   styleUrl: './user.component.scss'
 })
 export class UserComponent {
-
+  // Dynamic routing example:
+  constructor(private route:ActivatedRoute){}
+  ngOnInit():void{
+    console.warn("user id is: ", this.route.snapshot.paramMap.get('id'));
+  }
 }

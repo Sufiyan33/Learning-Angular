@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router, RouterOutlet } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 import { RedElementDirective } from './red-element.directive'; 
 import { FormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
