@@ -7,12 +7,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormControl, FormGroup, Validator } from '@angular/forms';
 import { UsdToInrPipe } from './pipes/usd-to-inr.pipe';
 import { RouterLink } from '@angular/router';
+import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, RedElementDirective, FormsModule, CommonModule, 
-    ReactiveFormsModule, UsdToInrPipe, RouterLink],
+    ReactiveFormsModule, UsdToInrPipe, RouterLink, NoPageFoundComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
