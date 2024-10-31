@@ -11,12 +11,14 @@ import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
 import { AboutUserComponent } from './about-user/about-user.component';
 import { AboutuserlistComponent } from './aboutuserlist/aboutuserlist.component';
 import { UserDataService } from './services/user-data.service';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, RedElementDirective, FormsModule, CommonModule, 
-    ReactiveFormsModule, UsdToInrPipe, RouterLink, NoPageFoundComponent, AboutUserComponent, AboutuserlistComponent],
+    ReactiveFormsModule, UsdToInrPipe, RouterLink, NoPageFoundComponent, AboutUserComponent,
+    AboutuserlistComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
