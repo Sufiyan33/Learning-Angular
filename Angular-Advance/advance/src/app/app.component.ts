@@ -10,6 +10,7 @@ import { RouterLink } from '@angular/router';
 import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
 import { AboutUserComponent } from './about-user/about-user.component';
 import { AboutuserlistComponent } from './aboutuserlist/aboutuserlist.component';
+import { UserDataService } from './services/user-data.service';
 
 @Component({
   selector: 'app-root',
@@ -61,5 +62,12 @@ export class AppComponent {
 
   get passwordValidator(){
     return this.profileForm.get('password')
+  }
+
+  // Accessing data from service class
+  dataForUser: any[]=[];
+  constructor(private usersData: UserDataService){
+    console.warn("User Data:: ", usersData.usersAllData())
+    this.dataForUser=usersData.usersAllData();
   }
 }

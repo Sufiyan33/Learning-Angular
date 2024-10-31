@@ -118,3 +118,13 @@
  <a routerLink="user/30">user3</a> <br />
 
  <router-outlet></router-outlet>
+
+<!-- Accessing data from service class -->
+ <h3 style="color: green;">--- Accessing data from service class ---</h3>
+ <p>
+  @for (item of dataForUser; track $index) {
+    <ul>
+      <li>{{item.name}}, {{item.age}}, {{item.email}}</li>
+    </ul>
+  }
+</p>

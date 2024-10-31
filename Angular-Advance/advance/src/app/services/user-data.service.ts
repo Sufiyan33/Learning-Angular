@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class UserDataService {
 
   constructor() { }
-  users(){
+  usersAllData(){
     return [
       {name: 'Sufiyan', age: 26, email: 'abc@gmailc.com'},
       {name: 'Sabir', age: 27, email: 'abcd@gmail.com'},
