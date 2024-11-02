@@ -1,1 +1,41 @@
-<p>post-api works!</p>
+<p>----- Post Api -----</p>
+<form #userForm="ngForm" (click)="onSave()">
+    <div style="padding-left: 5px;">
+        <input type="text" [(ngModel)]="userObj.name" name="name" placeholder="Enter name" /><br /><br/>
+        <input type="email" [(ngModel)]="userObj.email" name="email" placeholder="Enter email" /><br /><br/>
+        <input type="text" [(ngModel)]="userObj.title" name="title" placeholder="Enter title" /><br /><br/>
+        <input type="text" [(ngModel)]="userObj.body" name="body" placeholder="Enter body" /><br /><br/>
+    </div>
+    <div style="padding-left: 15px;">
+        <button class="btn btn-success" type="button">Submit form</button><br/><br />
+    </div>
+</form>
+
+<div class="card-body">
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Sr. No.</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Title</th>
+                        <th>Body</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (item of userDataFromPost; track $index) {
+                        <tr>
+                            <td>{{$index+1}}</td>
+                            <td>{{item.userId}}</td>
+                            <td>{{item.id}}</td>
+                            <td>{{item.title}}</td>
+                            <td>{{item.body}}</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
