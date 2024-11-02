@@ -9,4 +9,11 @@
             }
         </select>
     </div>
+    <div class="col-3">
+        <select class="form-select">
+            @for (item of getApiData; track $index) {
+                <option>{{item.id}}</option>
+            }
+        </select>
+    </div>
 </div>
