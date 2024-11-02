@@ -23,6 +23,8 @@ export class ApiintegrationComponent {
     this.http.get(this.url).subscribe((result:any) =>{
       debugger;
       this.getApiData = result;
+    }, error=>{
+      window.alert('Wrong api entered')
     })
   }
 }
