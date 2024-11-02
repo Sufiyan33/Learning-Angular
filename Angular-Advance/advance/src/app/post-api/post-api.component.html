@@ -1,13 +1,17 @@
 <p>----- Post Api -----</p>
 <form #userForm="ngForm" (click)="onSave()">
     <div style="padding-left: 5px;">
-        <input type="text" [(ngModel)]="userObj.name" name="name" placeholder="Enter name" /><br /><br/>
-        <input type="email" [(ngModel)]="userObj.email" name="email" placeholder="Enter email" /><br /><br/>
+        <input type="text" [(ngModel)]="userObj.userId" name="userId" placeholder="Enter userId" /><br /><br/>
+        <input type="text" [(ngModel)]="userObj.id" name="id" placeholder="Enter id" /><br /><br/>
         <input type="text" [(ngModel)]="userObj.title" name="title" placeholder="Enter title" /><br /><br/>
         <input type="text" [(ngModel)]="userObj.body" name="body" placeholder="Enter body" /><br /><br/>
     </div>
     <div style="padding-left: 15px;">
-        <button class="btn btn-success" type="button">Submit form</button><br/><br />
+        @if (userObj.id == 0) {
+            <button class="btn btn-success" (click)="onSave()">Submit form</button><br/><br />
+        }@else {
+            <button class="btn btn-warning" (click)="OnUpdate()">Update</button><br/><br />
+        }
     </div>
 </form>
 
@@ -17,11 +21,12 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th>Sr. No.</th>
-                        <th>Name</th>
-                        <th>Email</th>
+                        <th>Sr.No</th>
+                        <th>UserId</th>
+                        <th>Id</th>
                         <th>Title</th>
                         <th>Body</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -32,6 +37,7 @@
                             <td>{{item.id}}</td>
                             <td>{{item.title}}</td>
                             <td>{{item.body}}</td>
+                            <td><button class="btn btn-primary" (click)="OnEdit(item)">Edit</button></td>
                         </tr>
                     }
                 </tbody>

@@ -34,8 +34,21 @@ export class PostApiComponent implements OnInit{
   }
 
   getAllDataFromPost(){
-    this.http.get("https://jsonplaceholder.typicode.com/posts/").subscribe((res:any) =>{
+    this.http.get(this.url).subscribe((res:any) =>{
       this.userDataFromPost = res;
+    })
+  }
+
+  // Method for editing items value.
+  OnEdit(data: any){
+    this.userObj = data;
+  }
+
+  // Adding method for update Put api
+  OnUpdate(){
+    this.http.put("https://jsonplaceholder.typicode.com/posts/2", this.userObj).subscribe((res)=>{
+      this.getAllDataFromPost();
+      console.warn(res)
     })
   }
 }
