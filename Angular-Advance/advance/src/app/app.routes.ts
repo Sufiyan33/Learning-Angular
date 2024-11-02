@@ -5,6 +5,7 @@ import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
 import { AboutUserComponent } from './about-user/about-user.component';
 import { AboutuserlistComponent } from './aboutuserlist/aboutuserlist.component';
 import { ApiintegrationComponent } from './api-integration/apiintegration.component';
+import { PostApiComponent } from './post-api/post-api.component';
 
 export const routes: Routes = [
     {
@@ -22,6 +23,11 @@ export const routes: Routes = [
     {
         path: 'get-api',
         component: ApiintegrationComponent
+    },
+    {
+        path: 'add-data',
+        component: PostApiComponent
+
     },
     {
         path: '**',
