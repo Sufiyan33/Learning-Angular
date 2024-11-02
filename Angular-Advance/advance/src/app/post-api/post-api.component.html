@@ -38,6 +38,7 @@
                             <td>{{item.title}}</td>
                             <td>{{item.body}}</td>
                             <td><button class="btn btn-primary" (click)="OnEdit(item)">Edit</button></td>
+                            <td><button class="btn btn-danger" (click)="OnDelete(item.id)">Delete</button></td>
                         </tr>
                     }
                 </tbody>

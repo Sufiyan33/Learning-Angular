@@ -27,7 +27,14 @@ export const routes: Routes = [
     {
         path: 'add-data',
         component: PostApiComponent
-
+    },
+    {
+        path: 'put-api',
+        component: PostApiComponent
+    },
+    {
+        path: 'delete-api',
+        component: PostApiComponent
     },
     {
         path: '**',

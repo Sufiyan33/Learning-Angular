@@ -51,4 +51,12 @@ export class PostApiComponent implements OnInit{
       console.warn(res)
     })
   }
+
+  // Adding method for deleting data, delete api
+  OnDelete(id: number){
+    this.http.delete("https://jsonplaceholder.typicode.com/posts/2").subscribe((res)=>{
+      this.getAllDataFromPost();
+      console.warn(res)
+    })
+  }
 }
