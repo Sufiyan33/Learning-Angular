@@ -29,6 +29,9 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="delete-api">Delete API</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="admin">Lazy loading</a>
+        </li>
       </ul>
      <!-- <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -129,6 +132,16 @@
  <a routerLink="user/20">user2</a> <br />
  <a routerLink="user/30">user3</a> <br />
 
+ <!-- Lazy loading example -->
+ <ul>
+  <li>
+    <a routerLink="admin/login">login</a>
+  </li>
+  <li>
+    <a routerLink="admin/nUser">nUser</a>
+  </li>
+ </ul>
+ 
  <router-outlet></router-outlet>
 
 <!-- Accessing data from service class -->
