@@ -39,5 +39,10 @@ export const routes: Routes = [
     {
         path: '**',
         component: NoPageFoundComponent
+    },
+    // Now add here admin module routes so that in url it looks like admin/login or admin/user
+    {
+        path: 'admin',
+        loadChildren: ()=>import('./admin/admin.module').then(mod=>mod.AdminModule)
     }
 ];
