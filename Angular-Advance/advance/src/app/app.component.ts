@@ -14,13 +14,14 @@ import { UserDataService } from './services/user-data.service';
 import { FooterComponent } from './footer/footer.component';
 import { ApiintegrationComponent } from "./api-integration/apiintegration.component";
 import { NgcontainerComponent } from "./ngcontainer/ngcontainer.component";
+import { ViewChildComponent } from "./view-child/view-child.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, RedElementDirective, FormsModule, CommonModule,
     ReactiveFormsModule, UsdToInrPipe, RouterLink, NoPageFoundComponent, AboutUserComponent,
-    AboutuserlistComponent, FooterComponent, ApiintegrationComponent, NgcontainerComponent],
+    AboutuserlistComponent, FooterComponent, ApiintegrationComponent, NgcontainerComponent, ViewChildComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
