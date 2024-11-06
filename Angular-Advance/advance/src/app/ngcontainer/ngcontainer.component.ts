@@ -13,12 +13,15 @@ export class NgcontainerComponent {
   // ng-conainer or text inside it will be display if isContainer will be true
   isContainer: boolean = true;
   userDataFromPost: any[] =[];
+  isApiCalled: boolean = false;
 
   //http = Inject(HttpClient);
   constructor(private http: HttpClient){}
   getUser(){
+    this.isApiCalled = true;
     this.http.get("https://jsonplaceholder.typicode.com/users").subscribe((res:any)=>{
       this.userDataFromPost = res;
+      this.isApiCalled = false;
     })
   }
 }

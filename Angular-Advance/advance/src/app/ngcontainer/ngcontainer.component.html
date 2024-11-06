@@ -18,14 +18,31 @@
                 </tr>
             </thead>
             <tbody>
-                @for (item of userDataFromPost; track $index) {
+                <ng-container *ngIf="isApiCalled">
                     <tr>
-                        <td>{{$index+1}}</td>
-                        <td>{{item.name}}</td>
-                        <td>{{item.username}}</td>
-                        <td>{{item.email}}</td>
+                        <td colspan="4" class="text-center">
+                            <div class="spinner-border text-muted"></div>
+                            <div class="spinner-border text-primary"></div>
+                            <div class="spinner-border text-success"></div>
+                            <div class="spinner-border text-info"></div>
+                            <div class="spinner-border text-warning"></div>
+                            <div class="spinner-border text-danger"></div>
+                            <div class="spinner-border text-secondary"></div>
+                            <div class="spinner-border text-dark"></div>
+                            <div class="spinner-border text-light"></div>
+                        </td>
                     </tr>
-                }
+                </ng-container>
+                <ng-container *ngIf="!isApiCalled">
+                    @for (item of userDataFromPost; track $index) {
+                        <tr>
+                            <td>{{$index+1}}</td>
+                            <td>{{item.name}}</td>
+                            <td>{{item.username}}</td>
+                            <td>{{item.email}}</td>
+                        </tr>
+                        }
+                </ng-container>
             </tbody>
         </table>
     </div>
