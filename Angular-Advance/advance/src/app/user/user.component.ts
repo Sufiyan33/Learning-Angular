@@ -10,6 +10,7 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 })
 export class UserComponent {
   // Dynamic routing example:
+  textForView:any;
   constructor(private route:ActivatedRoute){}
   ngOnInit():void{
     console.warn("user id is: ", this.route.snapshot.paramMap.get('id'));
