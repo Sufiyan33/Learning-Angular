@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-view-child',
@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
   templateUrl: './view-child.component.html',
   styleUrl: './view-child.component.scss'
 })
-export class ViewChildComponent {
+export class ViewChildComponent implements AfterViewInit{
+  @ViewChild('txt') textBoxed?: ElementRef;
 
+  ngAfterViewInit(): void {
+    const value = this.textBoxed?.nativeElement.value;
+  }
 }
