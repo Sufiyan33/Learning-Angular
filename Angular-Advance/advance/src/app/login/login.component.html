@@ -5,13 +5,13 @@
             <form>
                 <div class="input-group">
                     <label for="username">Username</label>
-                    <input type="text" id="username" name="username" required>
+                    <input [(ngModel)]="userObj.userName" type="text" id="userName" name="userName" required>
                 </div>
                 <div class="input-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required>
+                    <input [(ngModel)]="userObj.password" type="password" id="password" name="password" required>
                 </div>
-                <button type="submit">Sign In</button>
+                <button type="button" (click)="onLogin()">Sign In</button>
             </form>
         </div>
     </div>
