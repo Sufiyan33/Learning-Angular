@@ -3,7 +3,7 @@ import { FooterComponent } from '../footer/footer.component';
 import { NgcontainerComponent } from '../ngcontainer/ngcontainer.component';
 import { ViewChildComponent } from '../view-child/view-child.component';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { CommonModule, CurrencyPipe, DatePipe, JsonPipe, LowerCasePipe, SlicePipe, UpperCasePipe } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { UsdToInrPipe } from '../pipes/usd-to-inr.pipe';
 import { UserDataService } from '../services/user-data.service';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
