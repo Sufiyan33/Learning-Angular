@@ -23,6 +23,11 @@ export class LoginComponent {
       // before redirecting to the page store credential into local storage
       localStorage.setItem('loginuser', this.userObj.userName)
       this.router.navigateByUrl('user-list');
+    }else if(this.userObj.userName == "admin" && this.userObj.password == "12345"){
+      alert('Login successfully');
+      // before redirecting to the page store credential into local storage
+      localStorage.setItem('loginuser', this.userObj.userName)
+      this.router.navigateByUrl('user-list');
     }else{
       alert('Invalid credentials')
     }
