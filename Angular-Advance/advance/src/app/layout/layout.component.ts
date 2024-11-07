@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FooterComponent } from '../footer/footer.component';
 import { NgcontainerComponent } from '../ngcontainer/ngcontainer.component';
 import { ViewChildComponent } from '../view-child/view-child.component';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { UsdToInrPipe } from '../pipes/usd-to-inr.pipe';
 import { UserDataService } from '../services/user-data.service';
@@ -68,8 +68,13 @@ export class LayoutComponent {
 
   // Accessing data from service class
   dataForUser: any[]=[];
-  constructor(private usersData: UserDataService){
+  constructor(private usersData: UserDataService, private router:Router){
     console.warn("User Data:: ", usersData.usersAllData())
     this.dataForUser=usersData.usersAllData();
+  }
+
+  LogOff(){
+    localStorage.removeItem('loginuser');
+    this.router.navigateByUrl('login');
   }
 }
