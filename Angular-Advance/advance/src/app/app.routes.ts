@@ -8,6 +8,7 @@ import { ApiintegrationComponent } from './api-integration/apiintegration.compon
 import { PostApiComponent } from './post-api/post-api.component';
 import { LoginComponent } from './login/login.component';
 import { LayoutComponent } from './layout/layout.component';
+import { authGuard } from './services/auth.guard';
 
 export const routes: Routes = [
     // Creating default routes for admin login.
@@ -42,7 +43,8 @@ export const routes: Routes = [
             },
             {
                 path: 'add-data',
-                component: PostApiComponent
+                component: PostApiComponent,
+                canActivate: [authGuard]
             },
             {
                 path: 'put-api',
