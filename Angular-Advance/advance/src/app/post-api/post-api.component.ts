@@ -1,6 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { Constant } from '../constant/Constant';
 
 @Component({
   selector: 'app-post-api',
@@ -18,7 +19,6 @@ export class PostApiComponent implements OnInit{
   }
 
   constructor(private http: HttpClient){}
-  url = "https://jsonplaceholder.typicode.com/posts";
 
   userDataFromPost: any[]=[];
   flag = false;
@@ -27,14 +27,14 @@ export class PostApiComponent implements OnInit{
     this.getAllDataFromPost();
   }
   onSave(){
-    this.http.post(this.url, this.userObj).subscribe((result:any) =>{
+    this.http.post(Constant.POST_API_URL, this.userObj).subscribe((result:any) =>{
       this.getAllDataFromPost();
       console.warn(result)
     })
   }
 
   getAllDataFromPost(){
-    this.http.get(this.url).subscribe((res:any) =>{
+    this.http.get(Constant.GET_API_URL).subscribe((res:any) =>{
       this.userDataFromPost = res;
     })
   }
@@ -46,7 +46,7 @@ export class PostApiComponent implements OnInit{
 
   // Adding method for update Put api
   OnUpdate(){
-    this.http.put("https://jsonplaceholder.typicode.com/posts/2", this.userObj).subscribe((res)=>{
+    this.http.put(Constant.PUT_API_URL, this.userObj).subscribe((res)=>{
       this.getAllDataFromPost();
       console.warn(res)
     })
@@ -54,7 +54,7 @@ export class PostApiComponent implements OnInit{
 
   // Adding method for deleting data, delete api
   OnDelete(id: number){
-    this.http.delete("https://jsonplaceholder.typicode.com/posts/2").subscribe((res)=>{
+    this.http.delete(Constant.DELETE_API_URL).subscribe((res)=>{
       this.getAllDataFromPost();
       console.warn(res)
     })

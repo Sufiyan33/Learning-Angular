@@ -12,6 +12,7 @@ import { NoPageFoundComponent } from '../no-page-found/no-page-found.component';
 import { AboutUserComponent } from '../about-user/about-user.component';
 import { AboutuserlistComponent } from '../aboutuserlist/aboutuserlist.component';
 import { ApiintegrationComponent } from '../api-integration/apiintegration.component';
+import { Constant } from '../constant/Constant';
 
 @Component({
   selector: 'app-layout',
@@ -29,6 +30,7 @@ export class LayoutComponent {
     name:'Sufiyan',
     location: 'India'
   }
+  validationMessage: any = Constant.VALIDATION_MESSAGES;
   directiveTitle = 'Hello!!! Welcome to directive.';
 
   userLogin(item:any){
