@@ -66,11 +66,18 @@ export class LayoutComponent {
     return this.profileForm.get('password')
   }
 
+  loggedUserData: any;
   // Accessing data from service class
   dataForUser: any[]=[];
   constructor(private usersData: UserDataService, private router:Router){
     console.warn("User Data:: ", usersData.usersAllData())
     this.dataForUser=usersData.usersAllData();
+
+    // Displaying logged in userName.
+    const loggedUser = localStorage.getItem('loginUser');
+    if(loggedUser !=null){
+      this.loggedUserData = JSON.parse(loggedUser);
+    }
   }
 
   LogOff(){
