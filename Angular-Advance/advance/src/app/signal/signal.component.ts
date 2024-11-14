@@ -19,7 +19,7 @@ export class SignalComponent {
   constructor(){
     const fName = this.fistName();
     setTimeout(() => {
-      //this.fistName.set('Dot net')
+      this.fistName.set('Dot net')
       this.courseName = "HTML"
     }, 3000);
   }
