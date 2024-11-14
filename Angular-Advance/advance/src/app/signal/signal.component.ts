@@ -12,11 +12,15 @@ export class SignalComponent {
   fistName = signal("Angular 18")
   rollNo = signal<number>(124)
 
-  //Now lets check it changing name automatically
+  //Let check change detection with normal variable.
+  courseName: string = "JAVA"
+
+  //Now lets check it changing name automatically.
   constructor(){
     const fName = this.fistName();
     setTimeout(() => {
-      this.fistName.set('Dot net')
+      //this.fistName.set('Dot net')
+      this.courseName = "HTML"
     }, 3000);
   }
 
