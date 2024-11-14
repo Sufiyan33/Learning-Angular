@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, Signal, signal } from '@angular/core';
 
 @Component({
   selector: 'app-signal',
@@ -41,5 +41,12 @@ export class SignalComponent {
 
   changeLastName(){
     this.lastName.set("Raja")
+  }
+
+  // Now let's play with Array.
+  cityList = signal(["Pune", "Mumbai"])
+
+  addCity(){
+    this.cityList.set([...this.cityList(), "Delhi"])
   }
 }

@@ -9,8 +9,11 @@
     <div class="col-3">
         {{rollNo()}}
     </div>
-    <div class="col-6">
+    <div class="col-3">
         FullName - {{fullName()}}
+    </div>
+    <div class="col-3">
+        {{cityList()}}
     </div>
 </div>
 <div class="row">
@@ -22,5 +25,8 @@
     </div>
     <div class="col-3 pt-2">
         <button type="button" class="btn btn-success"(click)="changeLastName()">Change Second Name</button>
+    </div>
+    <div class="col-3 pt-2">
+        <button type="button" class="btn btn-success" (click)="addCity()">Add City</button>
     </div>
 </div>
