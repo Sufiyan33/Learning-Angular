@@ -6,7 +6,8 @@ import { ChangeDetectionStrategy, Component, computed, Signal, signal } from '@a
   imports: [],
   templateUrl: './signal.component.html',
   styleUrl: './signal.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  // Uncomment changeDetection to test signal
+  //changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SignalComponent {
   name = signal("Angular 18")
