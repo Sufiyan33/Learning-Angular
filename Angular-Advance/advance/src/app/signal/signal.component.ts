@@ -9,4 +9,9 @@ import { Component, signal } from '@angular/core';
 })
 export class SignalComponent {
   fistName = signal("Angular 18")
+  rollNo = signal<number>(124)
+
+  constructor(){
+    const fName = this.fistName();
+  }
 }
