@@ -4,14 +4,23 @@
 </div>
 <div class="row">
     <div class="col-3">
-        {{fistName()}} -- {{courseName}}
+        {{name()}} -- {{courseName}}
     </div>
     <div class="col-3">
         {{rollNo()}}
+    </div>
+    <div class="col-6">
+        FullName - {{fullName()}}
     </div>
 </div>
 <div class="row">
     <div class="col-3 pt-2">
         <button type="button" class="btn btn-success"(click)="changeName()">Change Name</button>
+    </div>
+    <div class="col-3 pt-2">
+        <button type="button" class="btn btn-success"(click)="changeFirstName()">Change First Name</button>
+    </div>
+    <div class="col-3 pt-2">
+        <button type="button" class="btn btn-success"(click)="changeLastName()">Change Second Name</button>
     </div>
 </div>
