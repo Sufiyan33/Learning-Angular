@@ -13,13 +13,14 @@ import { AboutUserComponent } from '../about-user/about-user.component';
 import { AboutuserlistComponent } from '../aboutuserlist/aboutuserlist.component';
 import { ApiintegrationComponent } from '../api-integration/apiintegration.component';
 import { Constant } from '../constant/Constant';
+import { SignalComponent } from "../signal/signal.component";
 
 @Component({
   selector: 'app-layout',
   standalone: true,
   imports: [RouterOutlet, RedElementDirective, FormsModule, CommonModule,
     ReactiveFormsModule, UsdToInrPipe, RouterLink, NoPageFoundComponent, AboutUserComponent,
-    AboutuserlistComponent, FooterComponent, ApiintegrationComponent, NgcontainerComponent, ViewChildComponent],
+    AboutuserlistComponent, FooterComponent, ApiintegrationComponent, NgcontainerComponent, ViewChildComponent, SignalComponent],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss'
 })
