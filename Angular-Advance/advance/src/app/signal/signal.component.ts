@@ -14,4 +14,8 @@ export class SignalComponent {
   constructor(){
     const fName = this.fistName();
   }
+
+  changeName(){
+    this.fistName.set("Testing signal change state")
+  }
 }
