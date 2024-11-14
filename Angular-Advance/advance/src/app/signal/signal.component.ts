@@ -49,4 +49,14 @@ export class SignalComponent {
   addCity(){
     this.cityList.set([...this.cityList(), "Delhi"])
   }
+
+  // Now let's play with Object
+  studentObject = signal({
+    name: 'Aman',
+    city: 'Gujrat'
+  })
+
+  changeCity(){
+    this.studentObject.set({...this.studentObject(), city: 'Noida'})
+  }
 }

@@ -15,6 +15,9 @@
     <div class="col-2">
         {{cityList()}}
     </div>
+    <div class="col-2">
+        {{studentObject().name}} - {{studentObject().city}}
+    </div>
 </div>
 <div class="row">
     <div class="col-2 pt-2">
@@ -28,5 +31,8 @@
     </div>
     <div class="col-2 pt-2">
         <button type="button" class="btn btn-success" (click)="addCity()">Add City</button>
+    </div>
+    <div class="col-2 pt-2">
+        <button type="button" class="btn btn-success" (click)="changeCity()">Change City</button>
     </div>
 </div>
