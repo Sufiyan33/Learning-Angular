@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +7,8 @@ import { Subject } from 'rxjs';
 export class UserDataService {
 
   onRoleChange$: Subject<String> = new Subject<String>;
-  
+  role$: BehaviorSubject<String> = new BehaviorSubject<String>("");
+
   constructor() { }
   usersAllData(){
     return [

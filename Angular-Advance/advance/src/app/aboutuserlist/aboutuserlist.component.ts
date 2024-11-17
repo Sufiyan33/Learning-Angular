@@ -11,10 +11,15 @@ import { UserDataService } from '../services/user-data.service';
 export class AboutuserlistComponent {
 
   currentdRole: string = '';
+  beharviourRole: string = '';
 
   constructor(private userService: UserDataService){
     this.userService.onRoleChange$.subscribe((role: any)=>{
       this.currentdRole = role;
     });
+
+    this.userService.role$.subscribe((role: any) => {
+      this.beharviourRole = role;
+    })
   }
 }

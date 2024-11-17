@@ -91,5 +91,6 @@ export class LayoutComponent {
 
   onRoleChange(role: string){
     this.usersData.onRoleChange$.next(role);
+    this.usersData.role$.next(role);
   }
 }
