@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserDataService {
 
+  onRoleChange$: Subject<String> = new Subject<String>;
+  
   constructor() { }
   usersAllData(){
     return [

@@ -26,6 +26,7 @@ import { SignalComponent } from "../signal/signal.component";
 })
 export class LayoutComponent {
   title = 'Angular Advance Topics';
+  selectedRole: string = '';
   today = Date();
   user={
     name:'Sufiyan',
@@ -86,5 +87,9 @@ export class LayoutComponent {
   LogOff(){
     localStorage.removeItem('loginuser');
     this.router.navigateByUrl('login');
+  }
+
+  onRoleChange(role: string){
+    this.usersData.onRoleChange$.next(role);
   }
 }

@@ -34,6 +34,11 @@
         </li>
       </ul>
       <form class="d-flex">
+        <select [(ngModel)]="selectedRole" name="selectedRole" (ngModelChange)="onRoleChange($event)">
+          <option value="">Select Role</option>
+          <option value="user">User Role</option>
+          <option value="guest">Guest Role</option>
+        </select>
         <button class="btn btn-primary" type="submit" (click)="LogOff()">LogOff</button>
         <span style="padding-left: 10px; align-items: center;">{{loggedUserData?.emailId}}</span>
       </form>
